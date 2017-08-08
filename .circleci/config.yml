@@ -36,5 +36,5 @@ jobs:
 
       - run: ls -lrt /usr/local/bin
 
-      - run: kompose  version
+      - run: /usr/local/bin/kompose  version
 
