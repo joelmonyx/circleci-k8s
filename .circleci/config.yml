@@ -22,4 +22,4 @@ jobs:
       # run tests!
       - run: echo ${KUBE_CONFIG}
 
-      - run: base64 --decode ${KUBE_CONFIG}
+      - run: base64 -d ${KUBE_CONFIG}
