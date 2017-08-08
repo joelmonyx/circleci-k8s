@@ -26,4 +26,4 @@ jobs:
 
       - run: echo ${KUBE_CONFIG} | base64 -d > ~/.kube/config
 
-      - run: kubbectl get po
+      - run: kubectl get po
