@@ -21,9 +21,8 @@ jobs:
       
       - run: apk add --update curl
 
-      - run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.0.0/kompose-linux-amd64 -o /usr/local/bin/kompose && chmod +x /usr/local/bin/kompose
+      - run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.0.0/kompose-linux-amd64 -o kompose && chmod +x kompose && ./kompose version
 
-      # run tests!
       - run: echo ${KUBE_CONFIG}
 
       - run: mkdir -p ~/.kube
