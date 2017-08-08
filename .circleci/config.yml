@@ -22,4 +22,6 @@ jobs:
       # run tests!
       - run: echo ${KUBE_CONFIG}
 
-      - run: echo ${KUBE_CONFIG} | base64 -d
+      - run: mkdir -p ~/.kube
+
+      - run: echo ${KUBE_CONFIG} | base64 -d > ~/.kube/config
