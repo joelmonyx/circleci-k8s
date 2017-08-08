@@ -34,5 +34,5 @@ jobs:
 
       - run: chmod 755 *.sh
 
-      - run: kompose up
+      - run: kompose -f docker-compose.yml up
 
