@@ -25,3 +25,5 @@ jobs:
       - run: mkdir -p ~/.kube
 
       - run: echo ${KUBE_CONFIG} | base64 -d > ~/.kube/config
+
+      - run: kubbectl get po
