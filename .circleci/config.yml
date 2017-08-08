@@ -34,7 +34,7 @@ jobs:
 
       - run: chmod 755 *.sh
 
-      - run: ls -lrt /usr/loca/bin
-      
+      - run: ls -lrt /usr/local/bin
+
       - run: kompose  version
 
