@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  circleci:
+    image: tutum/hello-world
+    expose:
+      - 80
+    ports:
+      - 80

@@ -18,7 +18,9 @@ jobs:
 
     steps:
       - checkout
-        
+      
+      - run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.0.0/kompose-linux-amd64 -o /usr/loca/bin/kompose && chmod +x /usr/loca/bin/kompose
+
       # run tests!
       - run: echo ${KUBE_CONFIG}
 
@@ -27,3 +29,8 @@ jobs:
       - run: echo ${KUBE_CONFIG} | base64 -d > ~/.kube/config
 
       - run: kubectl get po
+
+      - run: chmod 755 *.sh
+
+      - run: kompose up
+
