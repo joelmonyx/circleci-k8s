@@ -21,7 +21,7 @@ jobs:
       
       - run: apk add --update curl libc6-compat
 
-      - run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.0.0/kompose-linux-amd64 -o kompose && chmod +x kompose && ./kompose version
+      - run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.0.0/kompose-linux-amd64 -o /usr/local/bin/kompose && chmod +x /usr/local/bin/kompose
 
       - run: echo ${KUBE_CONFIG}
 
@@ -35,5 +35,5 @@ jobs:
 
       - run: ls -lrt /usr/local/bin
 
-      - run: /usr/local/bin/kompose  version
+      - run: kompose -f docker-compose.yml up
 
