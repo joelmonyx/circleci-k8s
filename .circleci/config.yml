@@ -19,7 +19,7 @@ jobs:
     steps:
       - checkout
       
-      - run: apk add --update curl
+      - run: apk add --update curl libc6-compat
 
       - run: curl -L https://github.com/kubernetes/kompose/releases/download/v1.0.0/kompose-linux-amd64 -o kompose && chmod +x kompose && ./kompose version
 
